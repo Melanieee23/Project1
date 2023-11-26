@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Barcelona Experience</title>
+      <link rel="stylesheet" type="text/css" media="screen" href="bdicstylesheet.css" />
+    
+</head>
+
+<body>
+    <header>
+        <h1>Barcelona: Know Before You Go!</h1>
+    </header>
+    <nav>
+  <a href="index.html">Home</a>
+        <a href="AboutPage.html">About</a>
+        <a href="reccomendationsPage.html">Recommendations</a>
+        <a href="resources.html">Resources</a>
+    </nav>
+
+    <div class="carousel-container"> 
+        <div class="carousel">
+            <img src="street.jpg" alt="Barcelona Image 1">
+            <img src="guelview.jpg" alt="Barcelona Image 2">
+            <img src="hakonhaha.jpg" alt="Barcelona Image 3">
+             <img src="yuh.jpg" alt="Barcelona Image 3">
+             <img src="wari.jpg" alt="Barcelona Image 3">
+              <img src="sunset.jpg" alt="Barcelona Image 3">
+              <img src="night.jpg" alt="Barcelona Image 3">
+              <img src="dance.jpg" alt="Barcelona Image 3">
+        </div>
+        
+        <div class="dropdown">
+		<a href="#home">Home</a>
+		<a href="#news">News</a>
+		<button class="dropbtn">Dropdown 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    
+    <div class="dropdown-content">
+      <a href="AboutPage.html">Link 1</a>
+      <a href="reccomendationsPage.html">Link 2</a>
+      <a href="resources.html">Link 3</a>
+      
+    </div>
+  </div> 
+</div>
+    </div>
+
+    <div id="home" class="section">
+		<div class="white-box">
+        <h2>I have created this website to give people some reccomendations and advice while in Barcelona </h2>
+        <p> These are some things that have helped me better meet locals, practice my spanish and just overall get a more authentic expirience </p>
+        <p>  I have compiled the reccomendations I got from friends as well!</p>
+          <p> Enjoy :) </p>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Barcelona Experience. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for carousel functionality
+        const carousel = document.querySelector('.carousel');
+        let direction = 1;
+        let currentPosition = 0;
+
+        function animateCarousel() {
+            currentPosition += direction * 100;
+            if (currentPosition > 200) {
+                currentPosition = 0;
+            } else if (currentPosition < 0) {
+                currentPosition = 200;
+            }
+            carousel.style.transform = `translateX(-${currentPosition}%)`;
+        }
+
+        setInterval(() => {
+            animateCarousel();
+        }, 3000); // Change image every 3 seconds
+    </script>
+</body>
+
+</html>
+
+
+
